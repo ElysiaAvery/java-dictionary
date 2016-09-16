@@ -42,4 +42,18 @@ public class WordTest {
     Word secondWord = new Word("cat");
     assertEquals(Word.find(secondWord.getId()), secondWord);
   }
+
+  @Test
+  public void getDefintions_initiallyReturnsEmptyList_ArrayList() {
+    Word testWord = new Word("dog");
+    assertEquals(0, testWord.getDefintions().size());
+  }
+
+  @Test
+  public void addDefintion_addsDefinitionsToList_true() {
+    Word testWord = new Word("dog");
+    Definition testDefinition = new Definition("a mammal...");
+    testWord.addDefintion(testDefinition);
+    assertTrue(testWord.getDefintions().contains(testDefinition));
+  }
 }
