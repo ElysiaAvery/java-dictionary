@@ -4,10 +4,12 @@ import java.util.ArrayList;
 public class Word {
   private String mUserWord;
   private static List<Word> words = new ArrayList<Word>();
+  private int mId;
 
   public Word(String userWord) {
     mUserWord = userWord;
     words.add(this);
+    mId = words.size();
   }
 
   public String getUserWord() {
@@ -20,6 +22,14 @@ public class Word {
 
   public static void clear() {
     words.clear();
+  }
+
+  public int getId() {
+    return mId;
+  }
+
+  public static Word find(int id) {
+    return words.get(id - 1);
   }
 
 }

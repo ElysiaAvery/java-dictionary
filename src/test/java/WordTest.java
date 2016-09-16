@@ -21,4 +21,25 @@ public class WordTest {
     Word testWord = new Word("dog");
     assertEquals("dog", testWord.getUserWord());
   }
+
+  @Test
+  public void all_returnsAllInstancesOfWord_true() {
+    Word firstWord = new Word("dog");
+    Word secondWord = new Word("cat");
+    assertTrue(Word.all().contains(firstWord));
+    assertTrue(Word.all().contains(secondWord));
+  }
+
+  @Test
+  public void getId_wordsInstantiateWithAnId_1() {
+    Word testWord = new Word("dog");
+    assertEquals(1, testWord.getId());
+  }
+
+  @Test
+  public void find_returnsWordWithSAmeId_SecondWord() {
+    Word firstWord = new Word("dog");
+    Word secondWord = new Word("cat");
+    assertEquals(Word.find(secondWord.getId()), secondWord);
+  }
 }
