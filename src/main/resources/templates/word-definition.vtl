@@ -1,13 +1,21 @@
-
-<h1>Add a new Definition</h1>
-
-<form action="/definitions" method="post">
-  <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
-
-  <div class="form-group">
-    <label for="userInput">Definition: </label>
-    <input id="userInput" name="userInput" type="text" class="form-control">
+<div class="row">
+  <div class="col-md-12">
+    <img class="img-responsive" id="background" src="image/print.jpg" />
   </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h1>Add a new Definition</h1>
 
-  <button type="submit" class="btn btn-success">Add Definition</button>
-</form>
+    <form action="/definitions" method="post">
+      <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
+
+      <div class="form-group">
+        <label for="userInput">Definition: </label>
+        <input id="userInput" name="userInput" type="text" class="form-control">
+      </div>
+
+      <button type="submit" class="btn btn-success">Add Definition</button>
+    </form>
+  </div>
+</div>

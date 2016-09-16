@@ -6,7 +6,11 @@ body {
   list-style: none;
 }
 
-/*img {
+ul {
+  list-style-type: none;
+}
+
+img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -27,4 +31,4 @@ img#background {
     left: 50%;
     margin-left: -512px;
   }
-}*/
+}

@@ -1,15 +1,23 @@
-
-#if ($word)
-  <h1>$word.getUserWord() definitions: </h1>
-  <ul>
-    #foreach($definition in $word.getDefintions())
-     <li>$definition.getUserDefintion()</li>
+<div class="row">
+  <div class="col-md-12">
+    <img class="img-responsive" id="background" src="image/print.jpg" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    #if ($word)
+      <h1>$word.getUserWord() definitions: </h1>
+      <ul>
+        #foreach($definition in $word.getDefintions())
+         <li>$definition.getUserDefintion()</li>
+        #end
+      </ul>
+    #else
+      <p>That word does not have a definition.</p>
     #end
-  </ul>
-#else
-  <p>That word does not have a definition.</p>
-#end
 
-<a href="/words/$word.getId()/definitions/new">Add a new Definition</a>
-<br>
-<a href="/words">All Words</a>
+    <a href="/words/$word.getId()/definitions/new">Add a new Definition</a>
+    <br>
+    <a href="/words">All Words</a>
+  </div>
+</div>
