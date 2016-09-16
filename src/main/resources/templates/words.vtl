@@ -2,13 +2,11 @@
   <h1>Your List of Words:</h1>
   <ul>
     #foreach($word in $words)
-     <li>$word</li>
+     <li><a href="/words/$word.getId()">$word.getUserWord()</a></li>
     #end
   </ul>
 #else
   <p>That are currently no words.</p>
 #end
 
-<a href="/words/$word.getId()/definitions/new">Add a New Word</a>
-<br>
-<a href="/words">All Words</a>
+<a href="/words/new">Add a New Word</a>

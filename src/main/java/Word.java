@@ -34,7 +34,7 @@ public class Word {
     return words.get(id - 1);
   }
 
-  public List<Definition> getDefintions() {
+  public List<Definition> getDefinitions() {
     return mDefinitions;
   }
 
