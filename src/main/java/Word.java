@@ -38,7 +38,7 @@ public class Word {
     return mDefinitions;
   }
 
-  public void addDefintion(Definition definition) {
+  public void addDefinition(Definition definition) {
     mDefinitions.add(definition);
   }
 

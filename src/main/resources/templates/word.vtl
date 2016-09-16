@@ -1,0 +1,14 @@
+#if ($word)
+  <h1>$word.getUserWord() definitions: </h1>
+  <ul>
+    #foreach($definition in $word.getDefintions())
+     <li>$definition.getUserDefintion()</li>
+    #end
+  </ul>
+#else
+  <p>That word does not exist.</p>
+#end
+
+<a href="/words/$word.getId()/definitions/new">Add a new Word</a>
+<br>
+<a href="/words">All Words</a>
