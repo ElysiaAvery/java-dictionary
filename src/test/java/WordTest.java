@@ -44,16 +44,16 @@ public class WordTest {
   }
 
   @Test
-  public void getDefintions_initiallyReturnsEmptyList_ArrayList() {
+  public void getDefinitions_initiallyReturnsEmptyList_ArrayList() {
     Word testWord = new Word("dog");
-    assertEquals(0, testWord.getDefintions().size());
+    assertEquals(0, testWord.getDefinitions().size());
   }
 
   @Test
-  public void addDefintion_addsDefinitionsToList_true() {
+  public void addDefinition_addsDefinitionsToList_true() {
     Word testWord = new Word("dog");
     Definition testDefinition = new Definition("a mammal...");
-    testWord.addDefintion(testDefinition);
-    assertTrue(testWord.getDefintions().contains(testDefinition));
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
   }
 }
